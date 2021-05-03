@@ -8,7 +8,7 @@ The problem i have the same ID but I'm in two different rooms
 install: 
 `npm install` 
 
-Don't forget to update the mongo_URI 
+Don't forget to update the .env  mongo_URI 
 
 `MONGO_URI= mongodb+srv://DtaBaseName:DdPass@cluster0.njkga.mongodb.net/DtaBaseName?retryWrites=true&w=majority` 
 
