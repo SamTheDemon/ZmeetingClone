@@ -1,7 +1,8 @@
 # vid_conf-SE-project-
 (Im trying to pushing to heroku if it works i can show you something. )
 
-The problem i have the same ID but I'm in different rooms 
+The problem i have the same ID but I'm in two different rooms 
+(![image](https://user-images.githubusercontent.com/63297594/116935591-38d89f00-ac6f-11eb-8cf2-a31db989257d.png))
 
 
 install: 
