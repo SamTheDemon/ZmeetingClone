@@ -277,7 +277,7 @@ function detectMob() {
   
   const stopPresenting = (videoTrack) => {
     shareScreenBtn.classList.remove("true");
-    shareScreenBtn.setAttribute("tool_tip", "Present Screen");
+    shareScreenBtn.setAttribute("tool_tip", "Share Screen");
     for (peer in peers) {
       let sender = peers[peer].peerConnection.getSenders().find(function (s) {
         return s.track.kind == videoTrack.kind;

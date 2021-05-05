@@ -76,6 +76,9 @@ app.use("/", videoRoom);
 
 io.on("connection", (socket) => {
   socket.on("join-room", async (roomId, peerId, userId, name, audio, video) => {
+    console.log(roomId); 
+    console.log(peerId); 
+    console.log(userId);
     // add peer details
     await peerUser({
       peerId: peerId,
@@ -92,13 +95,15 @@ io.on("connection", (socket) => {
         admin: peerId,
         count: 1,
       }).save();
-      roomData = { count: 0 };
+      socket.join(roomId);
+      roomData = { count: 1 };
     } else if (roomData.userId == userId) {
       if (roomData.admin != peerId)
         await room.updateOne(
           { roomId: roomId },
           { admin: peerId, count: roomData.count + 1 }
         );
+        socket.join(roomId);
     } else
       await room.updateOne({ roomId: roomId }, { count: roomData.count + 1 });
     socket.join(roomId);

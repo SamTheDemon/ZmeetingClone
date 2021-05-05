@@ -1,9 +1,10 @@
 <div class="container py-5"
     style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <h3 class="text-center mb-3">Register Z Meet</h3>
-    <div class="card" style="width:100%; max-width: 35rem;">
+    <h3 class="text-center mb-3"   style="color: white;" >Register To ZMeeting</h3>
+    <div class="card" style="width:100%; max-width: 35rem;  background:   #b3b3da">
         <div style="display: flex; justify-content: space-between; align-items: center;" class="card-header">
-            <p class="m-0">Login Form</p><a href="/login" type="button" class="btn btn-outline-success">login</a>
+            <p class="m-0">Login Form</p>
+            <a href="/login" type="button"   style="color: white;"  class="btn btn-outline-dark">login</a>
         </div>
         <div class="card-body">
             <form action="/signup" method="POST">
@@ -61,8 +62,10 @@
                                         <input name="password" type="password" class="form-control"
                                             id="autoSizingInputGroup" placeholder="Password">
                                     </div>
+                                    <div id="passwordHelp" class="form-text">Don't give your password to anyone.
                                 </div>
-                                <button style="width: 100%;" type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                                <button style=" width: 100%; " type="submit" class="btn btn-dark">Submit</button>
             </form>
         </div>
     </div>
@@ -70,6 +73,8 @@
 
 <style>
     body {
-        background-color: #F5F5F5;
+        background: #19153b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 </style>

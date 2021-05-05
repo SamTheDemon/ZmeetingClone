@@ -5,7 +5,7 @@
     <div class="footer-wrapper">
       <div class="footer-elements-wrapper">
         <button id="share-toggle" class="footer-elements tooltip" tool_tip="Share Meeting link">
-          <ion-icon name="paper-plane-outline"></ion-icon>
+          <ion-icon name="share-social"></ion-icon>
         </button>
         <button id="video-toggle" class="footer-elements tooltip" tool_tip="Video Off">
           <ion-icon name="videocam-outline"></ion-icon>
@@ -20,30 +20,34 @@
         <button id="cams-toggle" class="footer-elements tooltip" tool_tip="Change the camera">
           <ion-icon name="sync-outline"></ion-icon>
         </button>
-        <button id="share-screen" class="footer-elements tooltip" tool_tip="Present Screen">
+        <button id="share-screen" class="footer-elements tooltip" tool_tip="Share Screen">
           <ion-icon name="tv-outline"></ion-icon>
         </button>
+        <button id="message-box" class="footer-elements tooltip" tool_tip="Messages" >
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        </button>
+
         <button id="meeting-toggle" class="footer-elements call-button tooltip" tool_tip="Join the Meeting">
           <ion-icon name="call-outline"></ion-icon>
         </button>
+      </button>
+      
+
       </div>
-      <div class="options-wrapper">
-        <button class="footer-elements">
+      <div class="options-wrapper" style="visibility: hidden;">
+        <button class="footer-elements" >
           <ion-icon name="ellipsis-vertical-outline"></ion-icon>
         </button>
       </div>
     </div>
   </footer>
   <div class="tool-bar-wrapper">
-    <button id="peoples-count" class="tool-bar-button">
+    <button id="peoples-count" class="tool-bar-button" >
       <ion-icon name="people-outline"></ion-icon>
       <span class="user-number" id="user-number">
         <%= count %>
       </span>
-    </button>
-    <button id="message-box" class="tool-bar-button">
-      <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-    </button>
+    
     <button id="time" class="tool-bar-button">
       00:00 AM
     </button>
