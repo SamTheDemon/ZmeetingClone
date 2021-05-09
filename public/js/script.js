@@ -16,11 +16,13 @@ function detectMob() {
   const socket = io("/");
   const videoGrid = document.getElementById("video-grid");
   // const name = prompt("Your name");
+ alert("now you are pre-viewing to join the meeting click the on cell phone");
   const myPeer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "3000",
+    port: "3000",//when deploying to heroku // port: "443",
   });
+
   var Peer_ID;
   const myVideo = document.createElement("video");
   myVideo.muted = true;
