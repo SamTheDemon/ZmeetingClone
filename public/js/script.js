@@ -20,7 +20,9 @@ function detectMob() {
   const myPeer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "3000",//when deploying to heroku // port: "443",
+    //port: "3000",
+    port: "443",
+    //when deploying to heroku 
   });
 
   var Peer_ID;
