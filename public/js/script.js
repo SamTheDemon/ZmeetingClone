@@ -16,7 +16,7 @@ function detectMob() {
   const socket = io("/");
   const videoGrid = document.getElementById("video-grid");
   // const name = prompt("Your name");
- alert("now you are pre-viewing to join the meeting click the on cell phone");
+ alert("now you are pre-viewing. click the 📞 green cell phone to join the meeting");
   const myPeer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
