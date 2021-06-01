@@ -1,33 +1,82 @@
-# Video Confrence App
-
+# Video Confrence App 
 https://leetsmeet.herokuapp.com/ 
 
+**How to use:**
 
-install: 
-`npm install` 
+* **As an End-user:**
 
-Don't forget to update the .env  mongo_URI 
+     1- Firstly you need to register an account in the web app: https://leetsmeet.herokuapp.com/signup
 
-`MONGO_URI= mongodb+srv://DtaBaseName:DdPass@cluster0.njkga.mongodb.net/DtaBaseName?retryWrites=true&w=majority` 
+     2- you will need to login with the configration you signed up with in the app: https://leetsmeet.herokuapp.com/login
 
-running the app:
+     3- After sigin up you will have a choice to either join an on going meeting or Create a new Meeting:
 
-`npm run devStart` or ` node server.js`
+     4- After creating a new meeting you will asked to allow mic and video to be able to interact with the others. 
 
-this app uses:
+     5- then you will be in a the pre-viewing room and you will be asked to click on the green cell phone to enter the call room.
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+* **As a Developer:**
 
-Node js 
+    After downloading the zip file or clonning to the repository: 
+    go to your terminal and run the following: 
 
-peer js
+    if you are using a Vscode go to server.js right click on the file -> open integrated terminal. 
 
-socket io
+    first thing copy the following to your terminal
 
-uuid 
+    to install npm 
+    `npm install` 
 
-express 
+    to be able to use the database: Don't forget to update the .env  mongo_URI 
+    `MONGO_URI= mongodb+srv://DtaBaseName:DdPass@cluster0.njkga.mongodb.net/DtaBaseName?retryWrites=true&w=majority` 
 
-passport
+    Finally, to run the app: 
+    `npm run devStart` or ` node server.js`
 
-mongoose 
+    go to your borwser: at http://localhost:3000/ and now have a local hosted web app.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**To create a video confrence app first thing you need is to:**
 
-npm 
+- create your Express js server ->  Express is a minimalist web framework for Node.js — Express makes it very easy to create and run a web server with Node.
+- stream your Video-Audio to the app -> Using JavaScript `navigator.mediaDevices.getUserMedia`, etc.. 
+- Then sett up rooms --> using uuid libary we were able to generate random unique RoomId(URL) for each room.
+- Stream others Video & Audio -->  using Socket.io and PeerJs. In short, Socket.io allows us to commincaute between a client and a server. and peer js implements WebRTC. 
+    - "https://socket.io/" & "https://peerjs.com/" & "https://webrtc.org/" 
+- Then we add CSS to Style the app. 
+- Added The user interfaces .ejs and some styling using CSS
+- decide what functions you want to use: 
+- Added login-signup Interfaces
+- Used Mongoose npm and passport Mongoes to provide a schema to our verifiacation, Mongoes provides a straight-forward, schema-based solution to model your application data.
+- Used Mongoose db to store data, 
+- Deployed our app to Heroku host services: we Tried differnt host servises like Azure, heroku and Vultr, it doesn't matter what host server you go with.  
+
+
+**This app uses:**
+- Node js - peer js - socket io - uuid - express - passport - mongoose - npm 
+
+     
+   In this app You can: 
+     - Create a meeting
+     - Join a meeting
+     - Pre-Viewing before Joining
+     - Invite others
+     - mute aduio
+     - stop video
+     - chating
+     - share screen
+     - Record Screen
+     - Login - register
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Refrences:**
+
+-Clever Programmer: https://www.youtube.com/watch?v=ZVznzY7EjuY
+
+-w3Schools Node js: https://www.w3schools.com/nodejs/default.asp
+
+-Academind: https://www.youtube.com/watch?v=2qDywOS7VAc 
+
+-Also Some documents From WebRTC.ventures.
+
+
+
