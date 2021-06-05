@@ -30,7 +30,7 @@ https://leetsmeet.herokuapp.com/
     to install npm 
     `npm install` 
 
-    to be able to use the database: Don't forget to update the .env  mongo_URI 
+    to be able to use the database: Don't forget to add the .env  of mongo_URI in the same folder of server.js
     `MONGO_URI= mongodb+srv://DtaBaseName:DdPass@cluster0.njkga.mongodb.net/DtaBaseName?retryWrites=true&w=majority` 
 
     Finally, to run the app: 
