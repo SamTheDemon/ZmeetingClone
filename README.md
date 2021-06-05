@@ -35,28 +35,31 @@ https://leetsmeet.herokuapp.com/
     `npm run devStart` or ` node server.js`
 
     go to your borwser: at http://localhost:3000/ and now have a local hosted web app.
+     
+    To Deploy The app: we used Heroku & azure but you can use anyother like aws 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-**To create a video confrence app first thing you need is to:**
+**BASIC IDEA BEHIND A VIDEO CONFRENCE APP AND tHING YOU NEED TO DEVELOP THE APP:**
 
-- create your Express js server ->  Express is a minimalist web framework for Node.js — Express makes it very easy to create and run a web server with Node.
-- stream your Video-Audio to the app -> Using JavaScript `navigator.mediaDevices.getUserMedia`, etc.. 
+- Create your Express js server ->  Express is a minimalist web framework for Node.js — Express makes it very easy to create and run a web server with `Node.Js`.
+- Show your Video-Audio to the app -> Using JavaScript `navigator.mediaDevices.getUserMedia`, etc.. 
 - Then sett up rooms --> using uuid libary we were able to generate random unique RoomId(URL) for each room.
 - Stream others Video & Audio -->  using Socket.io and PeerJs. In short, Socket.io allows us to commincaute between a client and a server. and peer js implements WebRTC. 
     - "https://socket.io/" & "https://peerjs.com/" & "https://webrtc.org/" 
-- Then we add CSS to Style the app. 
-- Added The user interfaces .ejs and some styling using CSS
-- decide what functions you want to use: 
-- Added login-signup Interfaces
-- Used Mongoose npm and passport Mongoes to provide a schema to our verifiacation, Mongoes provides a straight-forward, schema-based solution to model your application data.
-- Used Mongoose db to store data, 
-- Deployed our app to Heroku host services: we Tried differnt host servises like Azure, heroku and Vultr, it doesn't matter what host server you go with.  
+- Sytling the page with CSS. 
+- Added The user interfaces .ejs 
+- decide what functions you want to use: mute, stop video, etc... 
+- Extras
+     - login-signup Interfaces dded 
+     - Used Mongoose npm and passport Mongoes to provide a schema to our verifiacation, Mongoes provides a straight-forward, schema-based solution to model your application data.
+     - Used Mongoose db to store data, 
+- Publishing to Online Deployed our app to Heroku host services: we Tried differnt host servises like Azure, heroku and Vultr, it doesn't matter what host server you go with.  
 
 
 **This app uses:**
 - Node js - peer js - socket io - uuid - express - passport - mongoose - npm 
 
      
-   In this app You can: 
+  "Featuers of this WebApp:" 
      - Create a meeting
      - Join a meeting
      - Pre-Viewing before Joining
@@ -66,17 +69,22 @@ https://leetsmeet.herokuapp.com/
      - chating
      - share screen
      - Record Screen
-     - Login - register
+     - Login/register
+     - 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Refrences:**
 
--Clever Programmer: https://www.youtube.com/watch?v=ZVznzY7EjuY
+- Clever Programmer: https://www.youtube.com/watch?v=ZVznzY7EjuY
 
--w3Schools Node js: https://www.w3schools.com/nodejs/default.asp
+- w3Schools Node js: https://www.w3schools.com/nodejs/default.asp
 
--Academind: https://www.youtube.com/watch?v=2qDywOS7VAc 
+- Academind: https://www.youtube.com/watch?v=2qDywOS7VAc 
 
--Also Some documents From WebRTC.ventures.
+- WebRTC ventures: https://webrtc.ventures/webrtc-services-new/?utm_source=WebRTCTrainingTutorialseCourseTutorial2
+
+- WebRTC ventures: https://webrtc.ventures/2020/05/webrtc-security-and-privacy/?utm_source=WebRTCTrainingTutorialseCourseDisplacementEmail
+
+- Also Some documents From WebRTC.ventures unfortunately, I can't share them due to security issues.
 
 
 
