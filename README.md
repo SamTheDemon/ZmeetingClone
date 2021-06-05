@@ -5,15 +5,17 @@ https://leetsmeet.herokuapp.com/
 
 * **As an End-user:**
 
-     1- Firstly you need to register an account in the web app: https://leetsmeet.herokuapp.com/signup
+     1- Firstly, register an account in the web app: https://leetsmeet.herokuapp.com/signup
 
-     2- you will need to login with the configration you signed up with in the app: https://leetsmeet.herokuapp.com/login
+     2- Login with the configration you signed up with in the app: https://leetsmeet.herokuapp.com/login
 
-     3- After sigin up you will have a choice to either join an on going meeting or Create a new Meeting:
+     3- After Logging you will have a choice to either join an on going meeting or Create a new Meeting.
 
      4- After creating a new meeting you will asked to allow mic and video to be able to interact with the others. 
 
-     5- then you will be in a the pre-viewing room and you will be asked to click on the green cell phone to enter the call room.
+     5- Then you will be in a the pre-viewing room and you will be asked to click on the green cell phone to enter the call room.
+     
+     6- Featuers() of the app 
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 * **As a Developer:**
@@ -36,7 +38,8 @@ https://leetsmeet.herokuapp.com/
 
     go to your borwser: at http://localhost:3000/ and now have a local hosted web app.
      
-    To Deploy The app: we used Heroku & azure but you can use anyother like aws 
+    To Deploy The app: we used Heroku & azure but you can use anyother like AWS,GCP up to you.
+          - For heroku: Login and created an app in Heroku.com, then link the app with the github repo and Config Vars with th MONGO DB connection VAR
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **BASIC IDEA BEHIND A VIDEO CONFRENCE APP AND tHING YOU NEED TO DEVELOP THE APP:**
 
@@ -59,7 +62,7 @@ https://leetsmeet.herokuapp.com/
 - Node js - peer js - socket io - uuid - express - passport - mongoose - npm 
 
      
-  "Featuers of this WebApp:" 
+    **"Featuers of this WebApp:"**
      - Create a meeting
      - Join a meeting
      - Pre-Viewing before Joining
@@ -70,7 +73,7 @@ https://leetsmeet.herokuapp.com/
      - share screen
      - Record Screen
      - Login/register
-     - 
+     
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Refrences:**
 
