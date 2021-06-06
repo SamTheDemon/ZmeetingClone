@@ -72,7 +72,7 @@ function detectMob() {
       audio: myVideoStream.getAudioTracks()[0].enabled,
       video: myVideoStream.getVideoTracks()[0].enabled,
     });
-    // recieve the others stream
+   // Receive The Stream of the other person
     myPeer.on("call", (call) => {
       peers[call.peer] = call;
       call.answer(myVideoStream);
@@ -96,7 +96,7 @@ function detectMob() {
         video.parentElement.remove();
       });
     });
-  
+  //when user is connected we get their id, first name, audio and video anc increase the count numbers. 
     socket.on("user-connected", (userId, fname, audio, video, count) => {
       socket.emit("user-callback");
       connectToNewUser(userId, myVideoStream);
@@ -111,7 +111,7 @@ function detectMob() {
     counter.innerHTML = count;
   };
   function connectToNewUser(userId, stream) {
-    // set others peerid and send my stream
+    // Prepare the others peerid and Send my Stream.
     const call = myPeer.call(userId, stream);
     const video = document.createElement("video");
     call.on("stream", (userVideoStream) => {
@@ -136,7 +136,7 @@ function detectMob() {
   }
   var localAudioFXElement;
   function addVideoStream(video, stream, peerId, user, adminId) {
-    // create microphone button
+    // Mic button
     const micBtn = document.createElement("button");
     micBtn.classList.add("video-element");
     micBtn.classList.add("mic-button");
@@ -151,7 +151,7 @@ function detectMob() {
     if (user.audio) micBtn.classList.add("off");
     else audioFXElement.classList.add("off");
   
-    // video off element
+    //  Turning Video Off
     const videoOffIndicator = document.createElement("div");
     videoOffIndicator.classList.add("video-off-indicator");
     videoOffIndicator.innerHTML = `<ion-icon name="videocam-outline"></ion-icon>`;
@@ -168,7 +168,7 @@ function detectMob() {
     // optionBtn.classList.add("options-button");
     // optionBtn.innerHTML = `<ion-icon name="ellipsis-horizontal-outline"></ion-icon>`;
   
-    // main wrapper
+    // main video wrapper
     const videoWrapper = document.createElement("div");
     videoWrapper.id = "video-wrapper";
     videoWrapper.classList.add("video-wrapper");
@@ -278,7 +278,7 @@ function detectMob() {
         };
       });
   });
-  
+  //Stop sharing screen
   const stopPresenting = (videoTrack) => {
     shareScreenBtn.classList.remove("true");
     shareScreenBtn.setAttribute("tool_tip", "Share Screen");
@@ -300,9 +300,9 @@ function detectMob() {
     }
   };
   
-  // External
+ // External toggles
   
-  // video toggle
+  // video Toggle
   const videoToggleBtn = document.getElementById("video-toggle");
   videoToggleBtn.addEventListener("click", (e) => {
     let enabled = myVideoStream.getVideoTracks()[0].enabled;
@@ -321,13 +321,13 @@ function detectMob() {
       currentElement.setAttribute("tool_tip", "Video Off");
     }
   });
-  
+    //function of turning the video off
   const videoWrapperVideoToggle = (element, type) => {
     const videoWrapper = element.previousSibling;
     if (type) videoWrapper.classList.remove("video-disable");
     else videoWrapper.classList.add("video-disable");
   };
-  
+  //Audio Toggle
   const micToggleButton = document.getElementById("mic-toggle");
   micToggleButton.addEventListener("click", (e) => {
     const enabled = myVideoStream.getAudioTracks()[0].enabled;
@@ -346,15 +346,15 @@ function detectMob() {
       currentElement.setAttribute("tool_tip", "Microphone Off");
     }
   });
-  
+  //function of Toggling Audio on 
   socket.on("user-audio-toggle", (id, type) => {
     videoWrapperMicToggle(document.querySelector(`video[peer="${id}"]`), type);
   });
-  
+  //function of Toggling Video on 
   socket.on("user-video-toggle", (id, type) => {
     videoWrapperVideoToggle(document.querySelector(`video[peer="${id}"]`), type);
   });
-  
+  //function of turning audio off 
   const videoWrapperMicToggle = (element, type) => {
     const videoWrapper = element.previousSibling;
     const micButtons = videoWrapper.childNodes;
@@ -405,6 +405,8 @@ function detectMob() {
   // copyBtn.addEventListener("mouseout", (e) => {
   //   copyBtn.style.setProperty("--tooltip", '"copy"');
   // });
+//--------------Change camera Toggle
+/*
   const camToggleBtn = document.getElementById("cams-toggle");
   camToggleBtn.addEventListener("click", (e) => {
     myVideoStream.getTracks().forEach((track) => {
@@ -448,7 +450,9 @@ function detectMob() {
       .catch((error) => {
         console.log(error);
       });
+      
   });
+  */
   // const changeCam = (e) => {
   //   myVideoStream.getTracks().forEach((track) => {
   //     track.stop();
@@ -512,7 +516,7 @@ function detectMob() {
       recordingElement.classList.add("recording-indicator");
       recordingElement.innerHTML = `<div></div>`;
       myVideo.previousSibling.appendChild(recordingElement);
-      // recording
+      // Call recording function
       record(myVideoStream);
       recorder.start(1000);
     }
@@ -550,8 +554,8 @@ function detectMob() {
     };
   };
   
-  if (detectMob()) shareScreenBtn.remove();
-  else camToggleBtn.remove();
+//  if (detectMob()) shareScreenBtn.remove();
+//  else camToggleBtn.remove();
   class SE {
     constructor(mediaStream) {
       this.mediaStream = mediaStream;
