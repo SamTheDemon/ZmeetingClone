@@ -76,9 +76,9 @@ app.use("/", videoRoom);
 
 io.on("connection", (socket) => {
   socket.on("join-room", async (roomId, peerId, userId, name, audio, video) => {
-    console.log(roomId); 
-    console.log(peerId); 
-    console.log(userId);
+  //  console.log(roomId); 
+  //  console.log(peerId); 
+  //  console.log(userId);
     // add peer details
     await peerUser({
       peerId: peerId,
